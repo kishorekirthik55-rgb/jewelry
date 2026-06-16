@@ -1,4 +1,4 @@
-﻿/* =========================
+/* =========================
    GLOBAL
 ========================= */
 
@@ -165,10 +165,12 @@ nav a:hover{
 ========================= */
 
 .products{
-    width:90%;
-    max-width:1200px;
+    width:100%;
+    max-width:none;
 
-    margin:60px auto;
+    background:#071b33;
+
+    padding:100px 0;
 
     display:flex;
     flex-direction:column;
@@ -187,15 +189,18 @@ nav a:hover{
 
     gap:50px;
 
-    padding:30px;
+    width:90%;
+    max-width:1200px;
 
-    background:rgba(255,255,255,0.08);
+    margin:auto;
+
+    padding:40px;
+
+    background:#16254b;
 
     border-radius:25px;
 
-    backdrop-filter:blur(10px);
-
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    box-shadow:none;
 
     transition:.4s;
 }
@@ -251,11 +256,12 @@ nav a:hover{
     font-weight:500;
     letter-spacing:1px;
     margin-bottom:20px;
+    color:#f5e6d3;
 }
 
 .product-info p{
     line-height:1.8;
-    color:#1f2937;
+    color:#d7dce5;
     margin-bottom:25px;
     font-size:1rem;
 }
@@ -266,8 +272,8 @@ nav a:hover{
 
 button{
     border:none;
-    background:#111827;
-    color:white;
+    background:#f5e6d3;
+    color:#071b33;
     border-radius:0;
 
     padding:12px 28px;
