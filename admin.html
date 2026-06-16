@@ -1,0 +1,245 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#f4f4f4;
+    font-family:Arial,sans-serif;
+}
+
+.login-container,
+.admin-container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.1);
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.primary{
+    background:#0d6efd;
+    color:white;
+}
+
+.danger{
+    background:#dc3545;
+    color:white;
+}
+
+.success{
+    background:#198754;
+    color:white;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+}
+
+.hidden{
+    display:none;
+}
+
+.preview{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+
+<div id="loginSection" class="login-container">
+
+    <div class="card">
+
+        <h2>Admin Login</h2>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Username">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password">
+
+        <button
+            class="primary"
+            onclick="login()">
+            Login
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ADMIN DASHBOARD -->
+
+<div
+    id="adminSection"
+    class="admin-container hidden">
+
+    <div class="card">
+
+        <h2>Add Product</h2>
+
+        <input
+            type="text"
+            id="productName"
+            placeholder="Product Name">
+
+        <textarea
+            id="productDescription"
+            placeholder="Product Description">
+        </textarea>
+
+        <input
+            type="number"
+            id="productPrice"
+            placeholder="Price">
+
+        <input
+            type="text"
+            id="productCategory"
+            placeholder="Category">
+
+        <input
+            type="text"
+            id="productWhatsapp"
+            placeholder="WhatsApp Number">
+
+        <label>
+            Featured Product
+        </label>
+
+        <select id="featured">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+        </select>
+
+        <label>
+            Image URL 1
+        </label>
+
+        <input
+            type="text"
+            id="img1"
+            placeholder="https://">
+
+        <label>
+            Image URL 2
+        </label>
+
+        <input
+            type="text"
+            id="img2"
+            placeholder="https://">
+
+        <label>
+            Image URL 3
+        </label>
+
+        <input
+            type="text"
+            id="img3"
+            placeholder="https://">
+
+        <label>
+            Image URL 4
+        </label>
+
+        <input
+            type="text"
+            id="img4"
+            placeholder="https://">
+
+        <label>
+            Image URL 5
+        </label>
+
+        <input
+            type="text"
+            id="img5"
+            placeholder="https://">
+
+        <button
+            class="success"
+            onclick="addProduct()">
+            Save Product
+        </button>
+
+    </div>
+
+    <div class="card" style="margin-top:20px">
+
+        <h2>Products</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="productTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
+```

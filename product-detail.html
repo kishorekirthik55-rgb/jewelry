@@ -1,0 +1,148 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .product-detail{
+            max-width:1200px;
+            margin:auto;
+            padding:40px 20px;
+        }
+
+        .detail-container{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+        }
+
+        .main-image{
+            width:100%;
+            border-radius:15px;
+            cursor:zoom-in;
+            transition:.3s;
+        }
+
+        .main-image:hover{
+            transform:scale(1.05);
+        }
+
+        .thumbnail-container{
+            display:flex;
+            gap:10px;
+            margin-top:15px;
+            flex-wrap:wrap;
+        }
+
+        .thumbnail{
+            width:80px;
+            height:80px;
+            object-fit:cover;
+            border-radius:10px;
+            cursor:pointer;
+            border:2px solid transparent;
+        }
+
+        .thumbnail:hover{
+            border-color:#0d6efd;
+        }
+
+        .price{
+            font-size:28px;
+            font-weight:bold;
+            margin:15px 0;
+        }
+
+        .whatsapp-btn{
+            display:inline-block;
+            padding:15px 25px;
+            background:#25D366;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            font-weight:bold;
+        }
+
+        @media(max-width:768px){
+            .detail-container{
+                grid-template-columns:1fr;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Kee Store</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+        </ul>
+
+        <button id="darkModeBtn">🌙</button>
+    </nav>
+</header>
+
+<section class="product-detail">
+
+    <div class="detail-container">
+
+        <!-- Gallery -->
+        <div>
+
+            <img
+                id="mainImage"
+                class="main-image"
+                src=""
+                alt="Product">
+
+            <div
+                class="thumbnail-container"
+                id="thumbnailContainer">
+            </div>
+
+        </div>
+
+        <!-- Product Info -->
+        <div>
+
+            <h1 id="productName"></h1>
+
+            <p id="productDescription"></p>
+
+            <div
+                class="price"
+                id="productPrice">
+            </div>
+
+            <br>
+
+            <a
+                href="#"
+                id="buyWhatsapp"
+                class="whatsapp-btn">
+                Buy on WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/app.js"></script>
+<script src="js/detail.js"></script>
+
+</body>
+</html>
+```

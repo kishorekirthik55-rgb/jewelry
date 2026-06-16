@@ -1,0 +1,545 @@
+﻿/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f8f6f3;
+    color:#1f2937;
+    font-size:15px;
+    min-height:100vh;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 20px;
+
+    background:white;
+
+    border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:2px;
+    color:#111827;
+}
+
+nav{
+    display:flex;
+    gap:10px;
+    margin-left:auto;
+}
+
+nav a{
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#111827;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* =========================
+   HERO BANNER
+========================= */
+
+.hero-banner{
+    position:relative;
+
+    width:100vw;
+    height:100vh;
+
+    margin:0;
+
+    left:50%;
+
+    right:50%;
+
+    margin-left:-50vw;
+
+    margin-right:-50vw;
+
+    border-radius:0;
+
+    overflow:hidden;
+
+    box-shadow:none;
+}
+
+.hero-banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.45)
+    );
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-overlay h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.hero-overlay p{
+    max-width:700px;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.shop-btn{
+    display:inline-block;
+
+    padding:14px 35px;
+
+    background:white;
+    color:black;
+
+    text-decoration:none;
+
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+.shop-btn:hover{
+    background:black;
+    color:white;
+}
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.products{
+    width:90%;
+    max-width:1200px;
+
+    margin:60px auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:60px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:50px;
+
+    padding:30px;
+
+    background:rgba(255,255,255,0.08);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+    transition:.4s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.reverse{
+    flex-direction:row-reverse;
+}
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image{
+    width:300px;
+    height:300px;
+
+    flex-shrink:0;
+
+    overflow:hidden;
+
+    border-radius:20px;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.product-image:hover img{
+    transform:scale(1.08);
+}
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info{
+    flex:1;
+    min-width:0;
+}
+
+.product-info h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    font-weight:500;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.product-info p{
+    line-height:1.8;
+    color:#1f2937;
+    margin-bottom:25px;
+    font-size:1rem;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+    border:none;
+    background:#111827;
+    color:white;
+    border-radius:0;
+
+    padding:12px 28px;
+
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#cbd5e1;
+}
+
+/* =========================
+   CATEGORIES SECTION
+========================= */
+
+.categories-section{
+    background:#efe6da;
+    width:100%;
+    padding:80px 0;
+    margin-top:80px;
+    text-align:center;
+}
+
+.categories-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.categories-section h2{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    margin-bottom:60px;
+    color:#1f2937;
+}
+
+.categories-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+
+.category-item img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:auto;
+
+    transition:.4s;
+}
+
+.category-item:hover img{
+    transform:scale(1.05);
+}
+
+.category-item h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.8rem;
+    font-weight:500;
+    margin-top:20px;
+}
+
+/* =========================
+   TABLET / LAPTOP (992px)
+========================= */
+
+@media screen and (max-width:992px){
+
+    .product-card,
+    .reverse{
+        flex-direction:column !important;
+        text-align:center;
+        gap:30px;
+    }
+
+    .product-image{
+        width:100%;
+        max-width:350px;
+        height:auto;
+        aspect-ratio:1/1;
+    }
+
+    .product-info{
+        max-width:100%;
+    }
+
+    .product-info h2{
+        font-size:2rem;
+    }
+
+    .product-info p{
+        font-size:1rem;
+    }
+
+}
+
+/* =========================
+   MOBILE (768px)
+========================= */
+
+@media screen and (max-width:768px){
+
+    header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px 15px;
+    }
+
+    .logo{
+        font-size:16px;
+        letter-spacing:1px;
+    }
+
+    nav{
+        margin-left:auto;
+        gap:8px;
+    }
+
+    nav a{
+        font-size:10px;
+        letter-spacing:.5px;
+    }
+
+    .hero-banner{
+        width:100vw;
+        height:100vh;
+        margin:0;
+
+        left:50%;
+        margin-left:-50vw;
+
+        position:relative;
+    }
+
+    .hero-banner img{
+        width:100%;
+        height:100vh;
+        object-fit:cover;
+    }
+
+    .hero-overlay{
+        padding:20px;
+    }
+
+    .hero-overlay h2{
+        font-size:3rem;
+        line-height:1;
+        margin-bottom:15px;
+    }
+
+    .hero-overlay p{
+        font-size:1rem;
+        max-width:90%;
+        line-height:1.5;
+        margin-bottom:20px;
+    }
+
+    .shop-btn{
+        padding:12px 28px;
+        font-size:12px;
+    }
+
+    .categories-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:25px;
+    }
+
+    .category-item img{
+        width:150px;
+        height:150px;
+    }
+
+    .categories-section h2{
+        font-size:2rem;
+    }
+
+    .category-item h3{
+        font-size:1.3rem;
+    }
+
+    .products{
+        width:95%;
+        gap:25px;
+    }
+
+    .product-card{
+        flex-direction:row !important;
+        align-items:center;
+        justify-content:space-between;
+        gap:15px;
+        padding:15px;
+    }
+
+    .reverse{
+        flex-direction:row-reverse !important;
+    }
+
+    .product-image{
+        width:120px;
+        height:120px;
+        min-width:120px;
+        border-radius:10px;
+    }
+
+    .product-info{
+        flex:1;
+    }
+
+    .product-info h2{
+        font-size:28px;
+        margin-bottom:10px;
+    }
+
+    .product-info p{
+        font-size:14px;
+        line-height:1.5;
+        margin-bottom:12px;
+    }
+
+    button{
+        width:auto;
+        padding:8px 15px;
+        font-size:13px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE (480px)
+========================= */
+
+@media screen and (max-width:480px){
+
+    .product-card{
+        padding:20px;
+    }
+
+    .product-image{
+        max-width:280px;
+    }
+
+    .product-info h2{
+        font-size:1.6rem;
+    }
+
+    .product-info p{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    footer{
+        font-size:14px;
+        padding:20px;
+    }
+
+}
